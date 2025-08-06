@@ -1,12 +1,31 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navigation from "@/components/Navigation";
+import AssessmentHero from "@/components/AssessmentHero";
+import AssessmentOverview from "@/components/AssessmentOverview";
+import AssessmentSections from "@/components/AssessmentSections";
+import WISCARFramework from "@/components/WISCARFramework";
+import RecommendationEngine from "@/components/RecommendationEngine";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Navigation />
+      <main>
+        <AssessmentHero />
+        <section id="overview">
+          <AssessmentOverview />
+        </section>
+        <section id="assessment">
+          <AssessmentSections />
+        </section>
+        <section id="wiscar">
+          <WISCARFramework />
+        </section>
+        <section id="results">
+          <RecommendationEngine />
+        </section>
+      </main>
+      <Footer />
     </div>
   );
 };
