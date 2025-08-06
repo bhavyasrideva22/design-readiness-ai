@@ -36,10 +36,30 @@ const AssessmentHero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Button size="lg" variant="hero" className="px-8 py-4 text-lg">
+            <Button 
+              size="lg" 
+              variant="hero" 
+              className="px-8 py-4 text-lg"
+              onClick={() => {
+                const assessmentSection = document.getElementById('assessment');
+                if (assessmentSection) {
+                  assessmentSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
               Start Assessment
             </Button>
-            <Button size="lg" variant="outline" className="px-8 py-4 text-lg border-white/30 text-white hover:bg-white/10">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="px-8 py-4 text-lg border-white/30 text-white hover:bg-white/10"
+              onClick={() => {
+                const overviewSection = document.getElementById('overview');
+                if (overviewSection) {
+                  overviewSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
               Learn More
             </Button>
           </div>
